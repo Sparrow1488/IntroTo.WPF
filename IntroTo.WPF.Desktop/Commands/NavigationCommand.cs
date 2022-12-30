@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace IntroTo.WPF.Desktop.Commands;
 
-public class NavigationCommand<TViewModel> : Command
+public sealed class NavigationCommand<TViewModel> : Command
     where TViewModel : notnull, ViewModel
 {
     private readonly INavigationStore _store;
