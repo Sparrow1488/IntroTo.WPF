@@ -1,0 +1,42 @@
+﻿<Window x:Class="IntroTo.WPF.Desktop.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:IntroTo.WPF.Desktop.ViewModels"
+        xmlns:views="clr-namespace:IntroTo.WPF.Desktop.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="500">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="LightBlue" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Resources>
+    
+    <StackPanel>
+        <StackPanel VerticalAlignment="Top">
+            <WrapPanel>
+                <Button Padding="10 5" Content="Home" Background="{StaticResource GradientBrush}" Command="{Binding NavigateHomeCommand}"/>
+                <Button Padding="10 5" Content="Profile" Background="{StaticResource GradientBrush}" Command="{Binding NavigateProfileCommand}"/>
+                <Button Padding="10 5" Content="Settings" Background="{StaticResource GradientBrush}" Command="{Binding NavigateSettingsCommand}"/>
+            </WrapPanel>
+        </StackPanel>
+        
+        <StackPanel>
+            <ContentControl Content="{Binding CurrentViewModel}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+                        <views:HomeView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewModels:ProfileViewModel}">
+                        <views:ProfileView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type viewModels:UserSettingsViewModel}">
+                        <views:UserSettingsView/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+        </StackPanel>
+    </StackPanel>
+</Window>
