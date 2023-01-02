@@ -23,7 +23,7 @@ public sealed class UserSettingsViewModel : ViewModel
         _isPublic = userService.Current.Settings?.IsPublic ?? false;
         _notificationsEnabled = userService.Current.Settings?.NotificationsEnabled ?? false;
     }
-
+    
     public string Username
     {
         get => _username;

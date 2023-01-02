@@ -12,14 +12,31 @@
             <GradientStop Color="LightBlue" Offset="0" />
             <GradientStop Color="White" Offset="1" />
         </LinearGradientBrush>
+        <Style x:Key="NavigationButton" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Padding" Value="10 5"/>
+                <Setter Property="Background" Value="{StaticResource GradientBrush}"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontStyle" Value="Oblique"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     
     <StackPanel>
         <StackPanel VerticalAlignment="Top">
             <WrapPanel>
-                <Button Padding="10 5" Content="Home" Background="{StaticResource GradientBrush}" Command="{Binding NavigateHomeCommand}"/>
-                <Button Padding="10 5" Content="Profile" Background="{StaticResource GradientBrush}" Command="{Binding NavigateProfileCommand}"/>
-                <Button Padding="10 5" Content="Settings" Background="{StaticResource GradientBrush}" Command="{Binding NavigateSettingsCommand}"/>
+                <Button Style="{StaticResource NavigationButton}" 
+                        Content="Home" 
+                        Command="{Binding NavigateHomeCommand}"/>
+                <Button Style="{StaticResource NavigationButton}" 
+                        Content="Profile" 
+                        Command="{Binding NavigateProfileCommand}"/>
+                <Button Style="{StaticResource NavigationButton}" 
+                        Content="Settings" 
+                        Command="{Binding NavigateSettingsCommand}"/>
             </WrapPanel>
         </StackPanel>
         

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.WPF.Desktop", "Intr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.WPF.Model", "IntroTo.WPF.Model\IntroTo.WPF.Model.csproj", "{BCC9FAE4-EF95-4270-92D4-0528FD5BDCCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Reactive.Console", "IntroTo.Reactive.Console\IntroTo.Reactive.Console.csproj", "{88A44E50-2D0C-4323-BE07-F5AA31CC7FF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{BCC9FAE4-EF95-4270-92D4-0528FD5BDCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC9FAE4-EF95-4270-92D4-0528FD5BDCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC9FAE4-EF95-4270-92D4-0528FD5BDCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A44E50-2D0C-4323-BE07-F5AA31CC7FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A44E50-2D0C-4323-BE07-F5AA31CC7FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A44E50-2D0C-4323-BE07-F5AA31CC7FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A44E50-2D0C-4323-BE07-F5AA31CC7FF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
